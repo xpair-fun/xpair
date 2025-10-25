@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.payai.network)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:payai.network)",
+      "Bash(bun install)",
+      "Bash(bun run dev)",
+      "Bash(bun add:*)",
+      "Bash(bunx tailwindcss:*)",
+      "Bash(bun test)",
+      "Bash(bunx jest:*)",
+      "Bash(bun run test)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(bun run build:*)",
+      "WebSearch",
+      "WebFetch(domain:dev.jup.ag)",
+      "WebFetch(domain:facilitator.payai.network)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__github__get_file_contents",
+      "mcp__github__search_repositories",
+      "WebFetch(domain:docs.cdp.coinbase.com)",
+      "WebFetch(domain:x402.org)",
+      "Bash(.env.local)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

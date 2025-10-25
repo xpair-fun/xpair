@@ -1,0 +1,16 @@
+src
+examples
+.claude
+.git
+.github
+*.log
+*.tsbuildinfo
+tsconfig.json
+.eslintrc
+.prettierrc
+node_modules
+.DS_Store
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx

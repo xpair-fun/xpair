@@ -1,0 +1,68 @@
+{
+  "name": "xpair",
+  "version": "0.1.0",
+  "description": "Simple payment modal for x402 payments on Solana with onchain.fi smart routing",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "workspaces": [
+    "examples/*"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src --ext ts,tsx",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "solana",
+    "x402",
+    "payments",
+    "wallet",
+    "nextjs",
+    "react",
+    "micropayments",
+    "stablecoin",
+    "usdc"
+  ],
+  "author": "xpair-fun",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpair-fun/xpair.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xpair-fun/xpair/issues"
+  },
+  "homepage": "https://github.com/xpair-fun/xpair#readme",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.95.8",
+    "@solana/spl-token": "^0.4.9"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3",
+    "tsup": "^8.3.5",
+    "eslint": "^8.57.1"
+  }
+}
