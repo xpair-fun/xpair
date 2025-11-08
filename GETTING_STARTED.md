@@ -39,7 +39,6 @@ export default function App({ Component, pageProps }: AppProps) {
       config={{
         network: WalletAdapterNetwork.Mainnet,
         rpcEndpoint: 'https://mainnet.helius-rpc.com/?api-key=YOUR_KEY',
-        useOnchainFi: true,
       }}
       autoConnect={true}
     >

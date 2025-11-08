@@ -56,7 +56,6 @@ export default function App({ Component, pageProps }) {
       config={{
         network: WalletAdapterNetwork.Mainnet,
         rpcEndpoint: 'https://mainnet.helius-rpc.com/?api-key=YOUR_KEY',
-        useOnchainFi: true,
       }}
       autoConnect={true}
     >
@@ -136,7 +135,6 @@ The provider component that wraps your application.
   config={{
     network: WalletAdapterNetwork.Mainnet,
     rpcEndpoint: 'https://mainnet.helius-rpc.com/?api-key=YOUR_KEY',
-    useOnchainFi: true, // Enable smart routing
   }}
   wallets={[]} // optional, custom wallet adapters
   autoConnect={true} // optional, default true
