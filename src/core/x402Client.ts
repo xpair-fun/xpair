@@ -3,7 +3,6 @@ import {
   PublicKey,
   TransactionMessage,
   VersionedTransaction,
-  ComputeBudgetProgram,
   TransactionInstruction,
   SystemProgram,
 } from '@solana/web3.js';
@@ -85,20 +84,6 @@ export class X402Client {
     }
 
     const instructions: TransactionInstruction[] = [];
-
-    // CRITICAL: ComputeBudget instructions MUST be at positions 0 and 1
-    // Facilitators require these for proper transaction processing
-    instructions.push(
-      ComputeBudgetProgram.setComputeUnitLimit({
-        units: 40_000, // Sufficient for SPL transfer + ATA creation
-      })
-    );
-
-    instructions.push(
-      ComputeBudgetProgram.setComputeUnitPrice({
-        microLamports: 1, // Minimal priority fee
-      })
-    );
 
     // Check if destination ATA exists, create if needed
     // Facilitator will be the fee payer for ATA creation
