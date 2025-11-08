@@ -361,7 +361,7 @@ export function XPair({
             color: '#9ca3af',
           }}
         >
-          Powered by <strong>Xpair</strong> + onchain.fi
+          Powered by <strong>Xpair</strong>
         </div>
       </div>
     </div>

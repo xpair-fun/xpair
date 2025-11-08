@@ -19,9 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - In-modal success display with transaction hash
   - Auto-close after successful payment (3 second countdown)
   - Clean error handling separating wallet rejection from payment errors
-- **onchain.fi Integration**: Smart routing across multiple facilitators
-  - Automatic failover between 3 facilitators
-  - Zero-fee transactions for users (facilitator pays)
+- **Smart Routing**: Multi-facilitator routing system
+  - Automatic failover between multiple facilitators
+  - Zero-fee transactions for users
   - Improved payment reliability
 - Simple demo page at `examples/nextjs/src/pages/simple.tsx`
 - Server-side API key security via Next.js API proxy

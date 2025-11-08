@@ -88,11 +88,11 @@ import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
 ```typescript
 interface X402Config {
-  facilitatorUrl?: string;        // Default: 'https://facilitator.payai.network'
+  facilitatorUrl?: string;        // Default facilitator URL
   network?: WalletAdapterNetwork; // Default: WalletAdapterNetwork.Devnet
   rpcEndpoint?: string;           // Custom RPC endpoint
-  useOnchainFi?: boolean;         // Use onchain.fi aggregator for smart routing
-  onchainApiKey?: string;         // Onchain.fi API key (optional)
+  useOnchainFi?: boolean;         // Enable aggregator routing
+  onchainApiKey?: string;         // API key (optional)
 }
 ```
 
@@ -558,7 +558,7 @@ function isValidSolanaAddress(address: string): boolean
 ### DEFAULT_FACILITATOR_URL
 
 ```typescript
-const DEFAULT_FACILITATOR_URL = 'https://facilitator.payai.network';
+const DEFAULT_FACILITATOR_URL = string; // Default facilitator endpoint
 ```
 
 ### NETWORK_MAP

@@ -1,6 +1,6 @@
 # Next.js Xpair Example
 
-This is an example Next.js application demonstrating how to integrate the **Xpair** library for Solana-based x402 payments with **onchain.fi smart routing**.
+This is an example Next.js application demonstrating how to integrate the **Xpair** library for Solana-based x402 payments.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Xpair-fun/Xpair/tree/main/examples/nextjs)
 
@@ -8,32 +8,14 @@ This is an example Next.js application demonstrating how to integrate the **Xpai
 
 - 🎯 **Simple Integration** - Just one component: `<XPair />`
 - 💳 **USDC Payments** - Pay with USDC on Solana mainnet
-- 🔄 **Smart Routing** - Automatic routing across multiple facilitators via onchain.fi
+- 🔄 **Smart Routing** - Automatic routing across multiple facilitators
 - 👛 **Wallet Integration** - Full Solana wallet adapter support
 - ⚡ **Fast & Reliable** - Sub-second payment verification
 - 🎨 **Pre-built UI** - Beautiful payment modal, no styling needed
 
 ## Getting Started
 
-### 1. Get Your onchain.fi API Key
-
-Visit [onchain.fi/get-api-key](https://onchain.fi/get-api-key) and enter your email. You'll receive your API key instantly.
-
-Or use cURL:
-```bash
-curl -X POST https://api.onchain.fi/v1/api-keys/request \
-  -H "Content-Type: application/json" \
-  -d '{"email":"your@email.com"}'
-```
-
-### 2. Configure Environment
-
-Create `.env.local` and add your API key:
-```env
-NEXT_PUBLIC_ONCHAIN_API_KEY=your-api-key-here
-```
-
-### 3. Install & Run
+### 1. Install & Run
 
 ```bash
 bun install
@@ -75,19 +57,6 @@ You can buy USDC on exchanges like Coinbase, Kraken, or Jupiter.
 - Use the Quick Payment button to send 0.01 USDC instantly
 - Or use the Custom Payment form to enter any amount
 
-## How onchain.fi Works
-
-The app uses **onchain.fi smart routing** to automatically select the best facilitator:
-
-- **OctonetAI** - Supports Solana + SVM
-- **Aurracloud** - Solana specialist
-- **PayAI** - Multi-chain support
-
-onchain.fi handles:
-- ✅ Automatic failover if one facilitator is down
-- ✅ Intelligent selection by speed, cost, or reliability
-- ✅ Built-in retries and error handling
-
 ## Project Structure
 
 ```
@@ -116,13 +85,10 @@ Quick deploy to Vercel:
 
 ## Learn More
 
-- [onchain.fi Documentation](https://onchain.fi/docs)
 - [x402 Protocol](https://github.com/coinbase/x402)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Solana Documentation](https://docs.solana.com/)
 
 ## Support
 
-- Email: support@onchain.fi
-- Discord: [Join community](https://discord.gg/onchainfi)
 - GitHub: [Report issues](https://github.com/Xpair-fun/Xpair/issues)

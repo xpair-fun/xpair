@@ -2,7 +2,7 @@
 
 The simplest way to add USDC payments to your Next.js app. One component, no complexity.
 
-Drop-in payment modal for Solana micropayments using USDC with smart routing via onchain.fi.
+Drop-in payment modal for Solana micropayments using USDC.
 
 ## What is x402?
 
@@ -17,8 +17,8 @@ x402 is an open payment protocol that brings stablecoin payments to plain HTTP. 
 
 - **One Component**: Just drop in `<XPair />` and you're done
 - **Beautiful UI**: Pre-built payment modal, no styling needed
-- **Smart Routing**: onchain.fi routes to 3 facilitators for maximum reliability
-- **Zero Fees**: Users pay nothing extra, facilitator covers fees
+- **Smart Routing**: Automatic routing across multiple facilitators for maximum reliability
+- **Zero Fees**: Users pay nothing extra
 - **Wallet Support**: Works with Phantom, Solflare, and all Solana wallets
 - **TypeScript**: Full type safety included
 - **React Hooks**: Advanced hooks available if needed
@@ -56,7 +56,7 @@ export default function App({ Component, pageProps }) {
       config={{
         network: WalletAdapterNetwork.Mainnet,
         rpcEndpoint: 'https://mainnet.helius-rpc.com/?api-key=YOUR_KEY',
-        useOnchainFi: true, // Enable smart routing
+        useOnchainFi: true,
       }}
       autoConnect={true}
     >
@@ -323,8 +323,7 @@ npm run type-check
 
 ## Resources
 
-- [x402 Protocol Documentation](https://docs.payai.network/x402/introduction)
-- [PayAI Network](https://payai.network/)
+- [x402 Protocol](https://github.com/coinbase/x402)
 - [Solana Documentation](https://docs.solana.com/)
 - [Solana Wallet Adapter](https://github.com/solana-labs/wallet-adapter)
 

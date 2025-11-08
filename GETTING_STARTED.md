@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
       config={{
         network: WalletAdapterNetwork.Mainnet,
         rpcEndpoint: 'https://mainnet.helius-rpc.com/?api-key=YOUR_KEY',
-        useOnchainFi: true, // Enable smart routing
+        useOnchainFi: true,
       }}
       autoConnect={true}
     >
@@ -175,7 +175,7 @@ import { PaymentButton, BalanceDisplay } from 'Xpair';
 ## What's Included
 
 - **XPair**: Simple payment modal (easiest way)
-- **onchain.fi Smart Routing**: Automatic failover across 3 facilitators
+- **Smart Routing**: Automatic failover across multiple facilitators
 - **Zero Fees**: Users pay nothing extra
 - **USDC Payments**: Stablecoin payments on Solana mainnet
 - **Automatic ATA Creation**: No manual setup needed
@@ -198,12 +198,10 @@ import { PaymentButton, BalanceDisplay } from 'Xpair';
 
 - Check out the [full example](./examples/nextjs) for more advanced usage
 - Read the [API Reference](./README.md#api-reference) for detailed documentation
-- Learn about [x402 protocol](https://docs.payai.network/x402/introduction)
-- Explore [PayAI Network](https://payai.network/)
+- Learn about [x402 protocol](https://github.com/coinbase/x402)
 
 ## Support
 
 For issues or questions:
 - Open an issue on GitHub
-- Check the [x402 documentation](https://docs.payai.network/)
-- Join the PayAI community Discord
+- Check the [x402 documentation](https://github.com/coinbase/x402)

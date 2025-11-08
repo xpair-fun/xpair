@@ -9,9 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
       config={{
         network: WalletAdapterNetwork.Mainnet,
         rpcEndpoint: 'https://mainnet.helius-rpc.com/?api-key=d61f068c-a0c5-46b8-bcde-a32810ed6439',
-        // Use onchain.fi for smart routing across multiple facilitators
-        // API key is stored securely in /api/onchain proxy
-        onchainApiKey: 'local-proxy', // Dummy value to enable onchain.fi
+        onchainApiKey: 'local-proxy',
         useOnchainFi: true,
       }}
       autoConnect={true}

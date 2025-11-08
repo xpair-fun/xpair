@@ -54,8 +54,7 @@ export class X402Client {
 
   /**
    * Create a payment transaction for x402
-   * Implementation based on onchain.fi's reference: github.com/onchainfi/connect
-   * Uses VersionedTransaction with PayAI's fee payer
+   * Uses VersionedTransaction with facilitator fee payer
    */
   async createPaymentTransaction(
     payer: PublicKey,
@@ -64,7 +63,7 @@ export class X402Client {
     tokenMint?: PublicKey
   ): Promise<VersionedTransaction> {
     if (!tokenMint) {
-      throw new Error('Token mint is required. Onchain.fi facilitators only support SPL token payments (USDC), not native SOL.');
+      throw new Error('Token mint is required. Facilitators only support SPL token payments (USDC), not native SOL.');
     }
 
     const destination = new PublicKey(recipient);
@@ -142,11 +141,11 @@ export class X402Client {
     );
 
     // Create versioned transaction
-    // Use PayAI's feePayer as transaction payer (they pay fees, not user)
+    // Use facilitator feePayer as transaction payer (they pay fees, not user)
     const PAYAI_FEE_PAYER = new PublicKey('2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4');
 
     const message = new TransactionMessage({
-      payerKey: PAYAI_FEE_PAYER, // PayAI's fee payer (will co-sign and pay fees)
+      payerKey: PAYAI_FEE_PAYER, // Facilitator's fee payer (will co-sign and pay fees)
       recentBlockhash: blockhash,
       instructions,
     }).compileToV0Message();
@@ -206,7 +205,7 @@ export class X402Client {
   }
 
   /**
-   * Verify payment using onchain.fi aggregator
+   * Verify payment using aggregator
    */
   private async verifyOnchainFi(
     paymentPayload: PaymentPayload,
@@ -243,12 +242,12 @@ export class X402Client {
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(`Onchain.fi verify failed: ${errorData.message || response.statusText}`);
+      throw new Error(`Verification failed: ${errorData.message || response.statusText}`);
     }
 
     const data = await response.json();
 
-    // Convert onchain.fi response to VerifyResponse format
+    // Convert aggregator response to VerifyResponse format
     return {
       isValid: data.data.valid || false,
       payer: data.data.from || '',
@@ -288,7 +287,7 @@ export class X402Client {
   }
 
   /**
-   * Settle payment using onchain.fi aggregator
+   * Settle payment using aggregator
    */
   private async settleOnchainFi(
     paymentPayload: PaymentPayload
@@ -318,12 +317,12 @@ export class X402Client {
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(`Onchain.fi settle failed: ${errorData.message || response.statusText}`);
+      throw new Error(`Settlement failed: ${errorData.message || response.statusText}`);
     }
 
     const data = await response.json();
 
-    // Convert onchain.fi response to SettleResponse format
+    // Convert aggregator response to SettleResponse format
     return {
       success: data.data.success || data.data.settled || false,
       payer: data.data.from || '',
