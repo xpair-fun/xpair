@@ -18,9 +18,7 @@ import {
   X402Config,
   PaymentRequirement,
   PaymentPayload,
-  VerifyRequest,
   VerifyResponse,
-  SettleRequest,
   SettleResponse,
   SupportedResponse,
   ResourceDiscoveryParams,
@@ -39,7 +37,6 @@ export class X402Client {
   private connection: Connection;
   private network: SolanaNetwork;
   private onchainApiKey?: string;
-  private useOnchainFi: boolean;
 
   constructor(
     connection: Connection,
@@ -49,7 +46,6 @@ export class X402Client {
     this.facilitatorUrl = config?.facilitatorUrl || DEFAULT_FACILITATOR_URL;
     this.network = NETWORK_MAP[config?.network || WalletAdapterNetwork.Devnet];
     this.onchainApiKey = config?.onchainApiKey;
-    this.useOnchainFi = config?.useOnchainFi ?? !!config?.onchainApiKey;
   }
 
   /**
@@ -175,37 +171,17 @@ export class X402Client {
 
   /**
    * Verify a payment without settling
+   * Always uses smart routing for maximum reliability
    */
   async verify(
     paymentPayload: PaymentPayload,
     paymentRequirements: PaymentRequirement
   ): Promise<VerifyResponse> {
-    if (this.useOnchainFi) {
-      return this.verifyOnchainFi(paymentPayload, paymentRequirements);
-    }
-
-    const request: VerifyRequest = {
-      paymentPayload,
-      paymentRequirements,
-    };
-
-    const response = await fetch(`${this.facilitatorUrl}/verify`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(request),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Verify failed: ${response.statusText}`);
-    }
-
-    return await response.json();
+    return this.verifyOnchainFi(paymentPayload, paymentRequirements);
   }
 
   /**
-   * Verify payment using aggregator
+   * Verify payment using smart routing
    */
   private async verifyOnchainFi(
     paymentPayload: PaymentPayload,
@@ -257,37 +233,17 @@ export class X402Client {
 
   /**
    * Settle a payment (broadcast to blockchain)
+   * Always uses smart routing for maximum reliability
    */
   async settle(
     paymentPayload: PaymentPayload,
-    paymentRequirements: PaymentRequirement
+    _paymentRequirements: PaymentRequirement
   ): Promise<SettleResponse> {
-    if (this.useOnchainFi) {
-      return this.settleOnchainFi(paymentPayload);
-    }
-
-    const request: SettleRequest = {
-      paymentPayload,
-      paymentRequirements,
-    };
-
-    const response = await fetch(`${this.facilitatorUrl}/settle`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(request),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Settle failed: ${response.statusText}`);
-    }
-
-    return await response.json();
+    return this.settleOnchainFi(paymentPayload);
   }
 
   /**
-   * Settle payment using aggregator
+   * Settle payment using smart routing
    */
   private async settleOnchainFi(
     paymentPayload: PaymentPayload

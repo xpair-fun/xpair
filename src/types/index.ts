@@ -7,8 +7,7 @@ export interface X402Config {
   facilitatorUrl?: string;
   network?: WalletAdapterNetwork;
   rpcEndpoint?: string;
-  onchainApiKey?: string; // API key for smart routing
-  useOnchainFi?: boolean; // Use aggregator instead of direct facilitator
+  onchainApiKey?: string; // API key for smart routing (optional, uses default if not provided)
 }
 
 export interface PaymentRequirement {
