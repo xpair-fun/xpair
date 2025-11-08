@@ -4,7 +4,7 @@ import {
   TransactionMessage,
   VersionedTransaction,
   TransactionInstruction,
-  SystemProgram,
+  ComputeBudgetProgram,
 } from '@solana/web3.js';
 import {
   getAssociatedTokenAddress,
@@ -85,27 +85,18 @@ export class X402Client {
 
     const instructions: TransactionInstruction[] = [];
 
-    // Check if destination ATA exists, create if needed
-    // Facilitator will be the fee payer for ATA creation
-    const destAtaInfo = await this.connection.getAccountInfo(destinationAta, 'confirmed');
-    if (!destAtaInfo) {
-      const ASSOCIATED_TOKEN_PROGRAM_ID = new PublicKey('ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL');
+    // Add compute budget instructions
+    instructions.push(
+      ComputeBudgetProgram.setComputeUnitLimit({
+        units: 40_000,
+      })
+    );
 
-      const createAtaInstruction = new TransactionInstruction({
-        keys: [
-          { pubkey: payer, isSigner: false, isWritable: true }, // Fee payer (facilitator will replace)
-          { pubkey: destinationAta, isSigner: false, isWritable: true },
-          { pubkey: destination, isSigner: false, isWritable: false },
-          { pubkey: tokenMint, isSigner: false, isWritable: false },
-          { pubkey: SystemProgram.programId, isSigner: false, isWritable: false },
-          { pubkey: programId, isSigner: false, isWritable: false },
-        ],
-        programId: ASSOCIATED_TOKEN_PROGRAM_ID,
-        data: Buffer.from([0]), // CreateATA discriminator
-      });
-
-      instructions.push(createAtaInstruction);
-    }
+    instructions.push(
+      ComputeBudgetProgram.setComputeUnitPrice({
+        microLamports: 1,
+      })
+    );
 
     // SPL token transfer instruction
     instructions.push(
