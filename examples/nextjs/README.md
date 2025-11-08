@@ -1,8 +1,8 @@
-# Next.js Xpair Example
+# Next.js xpair Example
 
-This is an example Next.js application demonstrating how to integrate the **Xpair** library for Solana-based x402 payments.
+This is an example Next.js application demonstrating how to integrate the **xpair** library for Solana-based x402 payments.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Xpair-fun/Xpair/tree/main/examples/nextjs)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/xpair-fun/xpair/tree/main/examples/nextjs)
 
 ## Features
 

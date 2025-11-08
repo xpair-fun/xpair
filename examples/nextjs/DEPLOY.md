@@ -1,19 +1,19 @@
-# Deploying Xpair Next.js Example
+# Deploying xpair Next.js Example
 
-This guide shows you how to deploy the Xpair Next.js example application.
+This guide shows you how to deploy the xpair Next.js example application.
 
 ## Quick Deploy to Vercel
 
 The easiest way to deploy this Next.js app is using Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Xpair-fun/Xpair/tree/main/examples/nextjs)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/xpair-fun/xpair/tree/main/examples/nextjs)
 
 ### Manual Vercel Deployment
 
 1. **Fork or clone this repository**
    ```bash
-   git clone https://github.com/Xpair-fun/Xpair.git
-   cd Xpair/examples/nextjs
+   git clone https://github.com/xpair-fun/xpair.git
+   cd xpair/examples/nextjs
    ```
 
 2. **Install Vercel CLI**
@@ -167,7 +167,7 @@ Before deploying to production:
 
 For deployment issues:
 - Check [Vercel Documentation](https://vercel.com/docs)
-- Open an issue on [GitHub](https://github.com/Xpair-fun/Xpair/issues)
+- Open an issue on [GitHub](https://github.com/xpair-fun/xpair/issues)
 - Review [Next.js Deployment Docs](https://nextjs.org/docs/deployment)
 
 ## What's Deployed

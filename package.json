@@ -39,12 +39,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xpair-fun/Xpair.git"
+    "url": "git+https://github.com/xpair-fun/xpair.git"
   },
   "bugs": {
-    "url": "https://github.com/Xpair-fun/Xpair/issues"
+    "url": "https://github.com/xpair-fun/xpair/issues"
   },
-  "homepage": "https://github.com/Xpair-fun/Xpair#readme",
+  "homepage": "https://github.com/xpair-fun/xpair#readme",
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
