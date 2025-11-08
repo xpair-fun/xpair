@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.0] - 2025-11-08
 
 ### Changed
-- **BREAKING**: Package renamed from `@solana-x402/connect` to `xpair`
+- **BREAKING**: Package renamed from `@solana-x402/connect` to `Xpair`
 - Package now focuses on simple payment modal experience
 
 ### Added

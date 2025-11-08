@@ -1,4 +1,4 @@
-# xpair
+# Xpair
 
 The simplest way to add USDC payments to your Next.js app. One component, no complexity.
 
@@ -26,19 +26,19 @@ x402 is an open payment protocol that brings stablecoin payments to plain HTTP. 
 ## Installation
 
 ```bash
-npm install xpair
+npm install Xpair
 ```
 
 Or with yarn:
 
 ```bash
-yarn add xpair
+yarn add Xpair
 ```
 
 Or with bun:
 
 ```bash
-bun add xpair
+bun add Xpair
 ```
 
 ## Quick Start
@@ -47,7 +47,7 @@ bun add xpair
 
 ```tsx
 // pages/_app.tsx
-import { X402Provider } from 'xpair';
+import { X402Provider } from 'Xpair';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
 export default function App({ Component, pageProps }) {
@@ -71,7 +71,7 @@ export default function App({ Component, pageProps }) {
 That's it! Just drop in the XPair component:
 
 ```tsx
-import { XPair } from 'xpair';
+import { XPair } from 'Xpair';
 
 export default function PaymentPage() {
   return (
@@ -105,7 +105,7 @@ No styling needed, no complex setup, just works.
 The main payment modal component - use this for the simplest integration.
 
 ```tsx
-import { XPair } from 'xpair';
+import { XPair } from 'Xpair';
 
 <XPair
   recipient="WALLET_ADDRESS"
@@ -192,7 +192,7 @@ Display wallet balance for a specific token.
 Hook for executing payments programmatically.
 
 ```tsx
-import { usePayment } from 'xpair';
+import { usePayment } from 'Xpair';
 
 function MyComponent() {
   const { executePayment, isLoading, error } = usePayment({
@@ -218,7 +218,7 @@ function MyComponent() {
 Hook for fetching wallet balances.
 
 ```tsx
-import { useBalance } from 'xpair';
+import { useBalance } from 'Xpair';
 
 function MyComponent() {
   const { balance, isLoading, error, refetch } = useBalance(usdcToken);
@@ -232,7 +232,7 @@ function MyComponent() {
 Hook for accessing the x402 client.
 
 ```tsx
-import { useX402 } from 'xpair';
+import { useX402 } from 'Xpair';
 
 function MyComponent() {
   const { client, connection, network } = useX402();
@@ -265,7 +265,7 @@ const customToken = {
 ### Direct X402 Client Usage
 
 ```tsx
-import { useX402 } from 'xpair';
+import { useX402 } from 'Xpair';
 import { useWallet } from '@solana/wallet-adapter-react';
 
 function AdvancedPayment() {

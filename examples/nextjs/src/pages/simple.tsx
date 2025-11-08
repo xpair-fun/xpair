@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { XPair } from 'xpair';
+import { XPair } from 'Xpair';
 
 export default function Simple() {
   const [recipient, setRecipient] = useState('8FE27ioQh3T7o22QsYVT5Re8NnHFqmFNbdqwiF3ywuZQ');
   const [amount, setAmount] = useState('0.01');
-  const [description, setDescription] = useState('Test payment via xpair');
+  const [description, setDescription] = useState('Test payment via Xpair');
 
-  const codeExample = `import { XPair } from 'xpair';
+  const codeExample = `import { XPair } from 'Xpair';
 
 <XPair
   recipient="${recipient}"
@@ -25,7 +25,7 @@ export default function Simple() {
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '48px' }}>
         <h1 style={{ fontSize: '42px', fontWeight: 700, marginBottom: '12px', color: '#1A357F' }}>
-          xpair
+          Xpair
         </h1>
         <p style={{ fontSize: '18px', color: '#1A357F', opacity: 0.8, marginBottom: '8px' }}>
           The simplest way to add USDC payments to your Next.js app
@@ -235,7 +235,7 @@ export default function Simple() {
           fontSize: '14px',
           fontFamily: 'monospace',
         }}>
-          npm install xpair
+          npm install Xpair
         </code>
       </div>
     </div>

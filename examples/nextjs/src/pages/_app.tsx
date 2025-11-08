@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import { X402Provider } from 'xpair';
+import { X402Provider } from 'Xpair';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import '../styles/globals.css';
 

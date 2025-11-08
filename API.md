@@ -1,6 +1,6 @@
 # API Documentation
 
-Complete API reference for xpair.
+Complete API reference for Xpair.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ Complete API reference for xpair.
 **The simplest way to integrate payments** - drop-in payment modal with built-in UI.
 
 ```tsx
-import { XPair } from 'xpair';
+import { XPair } from 'Xpair';
 
 <XPair
   recipient="8FE27ioQh3T7o22QsYVT5Re8NnHFqmFNbdqwiF3ywuZQ"
@@ -63,7 +63,7 @@ import { XPair } from 'xpair';
 Main provider component that wraps your application with Solana wallet and x402 functionality.
 
 ```tsx
-import { X402Provider } from 'xpair';
+import { X402Provider } from 'Xpair';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
 <X402Provider
@@ -105,7 +105,7 @@ interface X402Config {
 One-click payment button component.
 
 ```tsx
-import { PaymentButton } from 'xpair';
+import { PaymentButton } from 'Xpair';
 
 <PaymentButton
   recipient="ADDRESS"
@@ -144,7 +144,7 @@ import { PaymentButton } from 'xpair';
 Customizable payment form component.
 
 ```tsx
-import { PaymentForm } from 'xpair';
+import { PaymentForm } from 'Xpair';
 
 <PaymentForm
   recipient="ADDRESS"
@@ -178,7 +178,7 @@ import { PaymentForm } from 'xpair';
 Display wallet balance component.
 
 ```tsx
-import { BalanceDisplay } from 'xpair';
+import { BalanceDisplay } from 'Xpair';
 
 <BalanceDisplay
   token={tokenInfo}
@@ -206,7 +206,7 @@ import { BalanceDisplay } from 'xpair';
 Access x402 client and connection.
 
 ```tsx
-import { useX402 } from 'xpair';
+import { useX402 } from 'Xpair';
 
 const { client, connection, network } = useX402();
 ```
@@ -228,7 +228,7 @@ const { client, connection, network } = useX402();
 Execute payments programmatically.
 
 ```tsx
-import { usePayment } from 'xpair';
+import { usePayment } from 'Xpair';
 
 const { executePayment, isLoading, error } = usePayment({
   onSuccess: (response) => console.log(response),
@@ -277,7 +277,7 @@ interface UsePaymentOptions {
 Fetch and display token balances.
 
 ```tsx
-import { useBalance } from 'xpair';
+import { useBalance } from 'Xpair';
 
 const { balance, isLoading, error, refetch } = useBalance(tokenInfo);
 ```
@@ -306,7 +306,7 @@ const { balance, isLoading, error, refetch } = useBalance(tokenInfo);
 Low-level client for x402 operations.
 
 ```tsx
-import { X402Client } from 'xpair';
+import { X402Client } from 'Xpair';
 import { Connection } from '@solana/web3.js';
 
 const connection = new Connection('https://api.devnet.solana.com');
@@ -484,7 +484,7 @@ import {
   formatTokenAmount,
   parseTokenAmount,
   isValidSolanaAddress,
-} from 'xpair';
+} from 'Xpair';
 ```
 
 #### getTokenBalance

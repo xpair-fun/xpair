@@ -105,7 +105,7 @@ export function XPair({
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="xpair-trigger"
+        className="Xpair-trigger"
         style={{
           padding: '12px 24px',
           backgroundColor: '#6366f1',
@@ -131,7 +131,7 @@ export function XPair({
 
   return (
     <div
-      className="xpair-modal-overlay"
+      className="Xpair-modal-overlay"
       style={{
         position: 'fixed',
         top: 0,
@@ -147,7 +147,7 @@ export function XPair({
       onClick={handleClose}
     >
       <div
-        className="xpair-modal"
+        className="Xpair-modal"
         style={{
           backgroundColor: 'white',
           borderRadius: '16px',
@@ -361,7 +361,7 @@ export function XPair({
             color: '#9ca3af',
           }}
         >
-          Powered by <strong>xpair</strong> + onchain.fi
+          Powered by <strong>Xpair</strong> + onchain.fi
         </div>
       </div>
     </div>

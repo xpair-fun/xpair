@@ -1,4 +1,4 @@
-# Contributing to xpair
+# Contributing to Xpair
 
 Thank you for your interest in contributing! This document provides guidelines and instructions for contributing to the project.
 
@@ -160,7 +160,7 @@ Currently, the project uses manual testing with the example application. Future 
 To test manually:
 1. Build the library: `npm run build`
 2. Link locally: `npm link`
-3. In example app: `npm link xpair`
+3. In example app: `npm link Xpair`
 4. Test all functionality
 
 ## Documentation

@@ -1,19 +1,19 @@
-# Deploying xpair Next.js Example
+# Deploying Xpair Next.js Example
 
-This guide shows you how to deploy the xpair Next.js example application.
+This guide shows you how to deploy the Xpair Next.js example application.
 
 ## Quick Deploy to Vercel
 
 The easiest way to deploy this Next.js app is using Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/xpair-fun/xpair/tree/main/examples/nextjs)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Xpair-fun/Xpair/tree/main/examples/nextjs)
 
 ### Manual Vercel Deployment
 
 1. **Fork or clone this repository**
    ```bash
-   git clone https://github.com/xpair-fun/xpair.git
-   cd xpair/examples/nextjs
+   git clone https://github.com/Xpair-fun/Xpair.git
+   cd Xpair/examples/nextjs
    ```
 
 2. **Install Vercel CLI**
@@ -30,12 +30,12 @@ The easiest way to deploy this Next.js app is using Vercel:
    - Set up and deploy: `Y`
    - Which scope: Select your account
    - Link to existing project: `N`
-   - Project name: `xpair-demo` (or your choice)
+   - Project name: `Xpair-demo` (or your choice)
    - Directory: `./`
    - Override settings: `N`
 
 5. **Your app is live!**
-   Vercel will provide you with a URL like: `https://xpair-demo.vercel.app`
+   Vercel will provide you with a URL like: `https://Xpair-demo.vercel.app`
 
 ## Deploy to Other Platforms
 
@@ -167,17 +167,17 @@ Before deploying to production:
 
 For deployment issues:
 - Check [Vercel Documentation](https://vercel.com/docs)
-- Open an issue on [GitHub](https://github.com/xpair-fun/xpair/issues)
+- Open an issue on [GitHub](https://github.com/Xpair-fun/Xpair/issues)
 - Review [Next.js Deployment Docs](https://nextjs.org/docs/deployment)
 
 ## What's Deployed
 
 The deployed app includes:
-- Full xpair payment integration
+- Full Xpair payment integration
 - Smart routing via onchain.fi
 - Multiple payment examples
 - Wallet connection UI
 - Balance display components
 - Test suite
 
-All using the published `xpair` npm package.
+All using the published `Xpair` npm package.

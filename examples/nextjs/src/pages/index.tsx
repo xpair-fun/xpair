@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { XPair, useBalance } from 'xpair';
+import { XPair, useBalance } from 'Xpair';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import { USDC_MINT, DEFAULT_TOKEN_INFO } from 'xpair';
+import { USDC_MINT, DEFAULT_TOKEN_INFO } from 'Xpair';
 
 export default function Home() {
   const { publicKey, connected } = useWallet();
   const [recipient, setRecipient] = useState('8FE27ioQh3T7o22QsYVT5Re8NnHFqmFNbdqwiF3ywuZQ');
   const [amount, setAmount] = useState('0.01');
-  const [description, setDescription] = useState('Test payment via xpair');
+  const [description, setDescription] = useState('Test payment via Xpair');
 
   const usdcToken = {
     mint: USDC_MINT[WalletAdapterNetwork.Mainnet],
@@ -19,7 +19,7 @@ export default function Home() {
 
   const { balance, isLoading: balanceLoading, refetch } = useBalance(usdcToken);
 
-  const codeExample = `import { XPair } from 'xpair';
+  const codeExample = `import { XPair } from 'Xpair';
 
 <XPair
   recipient="${recipient}"
@@ -46,7 +46,7 @@ export default function Home() {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <h1 style={{ fontSize: '28px', fontWeight: 700, color: 'white', margin: 0 }}>
-            xpair
+            Xpair
           </h1>
           <span style={{
             padding: '4px 12px',
@@ -106,7 +106,7 @@ export default function Home() {
             fontSize: '16px',
             fontFamily: 'monospace',
           }}>
-            npm install xpair
+            npm install Xpair
           </code>
         </div>
 
@@ -410,7 +410,7 @@ export default function Home() {
         margin: '0 auto',
       }}>
         <p style={{ fontSize: '14px', marginBottom: '8px', opacity: 0.8 }}>
-          Built with xpair • Powered by Solana & onchain.fi
+          Built with Xpair • Powered by Solana & onchain.fi
         </p>
         <p style={{ fontSize: '12px', opacity: 0.6 }}>
           Mainnet Environment • Real Payments

@@ -1,5 +1,5 @@
 {
-  "name": "xpair",
+  "name": "Xpair",
   "version": "0.1.0",
   "description": "Simple payment modal for x402 payments on Solana with onchain.fi smart routing",
   "main": "./dist/index.js",
@@ -35,16 +35,16 @@
     "stablecoin",
     "usdc"
   ],
-  "author": "xpair-fun",
+  "author": "Xpair-fun",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xpair-fun/xpair.git"
+    "url": "git+https://github.com/Xpair-fun/Xpair.git"
   },
   "bugs": {
-    "url": "https://github.com/xpair-fun/xpair/issues"
+    "url": "https://github.com/Xpair-fun/Xpair/issues"
   },
-  "homepage": "https://github.com/xpair-fun/xpair#readme",
+  "homepage": "https://github.com/Xpair-fun/Xpair#readme",
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
