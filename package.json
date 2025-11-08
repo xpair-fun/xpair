@@ -1,6 +1,6 @@
 {
-  "name": "@xpair-fun/xpair",
-  "version": "0.1.1",
+  "name": "xpair",
+  "version": "0.1.2",
   "description": "Simple payment modal for x402 payments on Solana",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
