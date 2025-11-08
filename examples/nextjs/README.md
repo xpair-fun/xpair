@@ -2,6 +2,8 @@
 
 This is an example Next.js application demonstrating how to integrate the **xpair** library for Solana-based x402 payments with **onchain.fi smart routing**.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/xpair-fun/xpair/tree/main/examples/nextjs)
+
 ## Features
 
 - 🎯 **Simple Integration** - Just one component: `<XPair />`
@@ -104,6 +106,14 @@ examples/nextjs/
 
 **Start with `/simple`** to see the easiest integration with XPair component!
 
+## Deploy Your Own
+
+Want to deploy this example? Check out the [Deployment Guide](./DEPLOY.md) for instructions on deploying to Vercel, Netlify, or Railway.
+
+Quick deploy to Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/xpair-fun/xpair/tree/main/examples/nextjs)
+
 ## Learn More
 
 - [onchain.fi Documentation](https://onchain.fi/docs)
@@ -115,4 +125,4 @@ examples/nextjs/
 
 - Email: support@onchain.fi
 - Discord: [Join community](https://discord.gg/onchainfi)
-- GitHub: [Report issues](https://github.com/zortos/x402api/issues)
+- GitHub: [Report issues](https://github.com/xpair-fun/xpair/issues)
