@@ -88,9 +88,11 @@ import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
 ```typescript
 interface X402Config {
-  facilitatorUrl?: string;     // Default: 'https://facilitator.payai.network'
+  facilitatorUrl?: string;        // Default: 'https://facilitator.payai.network'
   network?: WalletAdapterNetwork; // Default: WalletAdapterNetwork.Devnet
-  rpcEndpoint?: string;        // Custom RPC endpoint
+  rpcEndpoint?: string;           // Custom RPC endpoint
+  useOnchainFi?: boolean;         // Use onchain.fi aggregator for smart routing
+  onchainApiKey?: string;         // Onchain.fi API key (optional)
 }
 ```
 
