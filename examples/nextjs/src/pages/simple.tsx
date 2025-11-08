@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { XPair } from 'Xpair';
+import { XPair } from 'xpair';
 
 export default function Simple() {
   const [recipient, setRecipient] = useState('8FE27ioQh3T7o22QsYVT5Re8NnHFqmFNbdqwiF3ywuZQ');
   const [amount, setAmount] = useState('0.01');
   const [description, setDescription] = useState('Test payment via Xpair');
 
-  const codeExample = `import { XPair } from 'Xpair';
+  const codeExample = `import { XPair } from 'xpair';
 
 <XPair
   recipient="${recipient}"

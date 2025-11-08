@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { XPair, useBalance } from 'Xpair';
+import { XPair, useBalance } from 'xpair';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import { USDC_MINT, DEFAULT_TOKEN_INFO } from 'Xpair';
+import { USDC_MINT, DEFAULT_TOKEN_INFO } from 'xpair';
 
 export default function Home() {
   const { publicKey, connected } = useWallet();
@@ -19,7 +19,7 @@ export default function Home() {
 
   const { balance, isLoading: balanceLoading, refetch } = useBalance(usdcToken);
 
-  const codeExample = `import { XPair } from 'Xpair';
+  const codeExample = `import { XPair } from 'xpair';
 
 <XPair
   recipient="${recipient}"

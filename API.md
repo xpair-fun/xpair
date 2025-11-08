@@ -20,7 +20,7 @@ Complete API reference for Xpair.
 **The simplest way to integrate payments** - drop-in payment modal with built-in UI.
 
 ```tsx
-import { XPair } from 'Xpair';
+import { XPair } from 'xpair';
 
 <XPair
   recipient="8FE27ioQh3T7o22QsYVT5Re8NnHFqmFNbdqwiF3ywuZQ"
@@ -63,7 +63,7 @@ import { XPair } from 'Xpair';
 Main provider component that wraps your application with Solana wallet and x402 functionality.
 
 ```tsx
-import { X402Provider } from 'Xpair';
+import { X402Provider } from 'xpair';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
 <X402Provider
@@ -105,7 +105,7 @@ interface X402Config {
 One-click payment button component.
 
 ```tsx
-import { PaymentButton } from 'Xpair';
+import { PaymentButton } from 'xpair';
 
 <PaymentButton
   recipient="ADDRESS"
@@ -144,7 +144,7 @@ import { PaymentButton } from 'Xpair';
 Customizable payment form component.
 
 ```tsx
-import { PaymentForm } from 'Xpair';
+import { PaymentForm } from 'xpair';
 
 <PaymentForm
   recipient="ADDRESS"
@@ -178,7 +178,7 @@ import { PaymentForm } from 'Xpair';
 Display wallet balance component.
 
 ```tsx
-import { BalanceDisplay } from 'Xpair';
+import { BalanceDisplay } from 'xpair';
 
 <BalanceDisplay
   token={tokenInfo}
@@ -206,7 +206,7 @@ import { BalanceDisplay } from 'Xpair';
 Access x402 client and connection.
 
 ```tsx
-import { useX402 } from 'Xpair';
+import { useX402 } from 'xpair';
 
 const { client, connection, network } = useX402();
 ```
@@ -228,7 +228,7 @@ const { client, connection, network } = useX402();
 Execute payments programmatically.
 
 ```tsx
-import { usePayment } from 'Xpair';
+import { usePayment } from 'xpair';
 
 const { executePayment, isLoading, error } = usePayment({
   onSuccess: (response) => console.log(response),
@@ -277,7 +277,7 @@ interface UsePaymentOptions {
 Fetch and display token balances.
 
 ```tsx
-import { useBalance } from 'Xpair';
+import { useBalance } from 'xpair';
 
 const { balance, isLoading, error, refetch } = useBalance(tokenInfo);
 ```

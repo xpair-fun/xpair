@@ -11,16 +11,16 @@ This guide will walk you through adding USDC payments to your Next.js applicatio
 
 ## Installation
 
-Install Xpair in your Next.js project:
+Install xpair in your Next.js project:
 
 ```bash
-npm install Xpair
+npm install xpair
 ```
 
 Or with bun:
 
 ```bash
-bun add Xpair
+bun add xpair
 ```
 
 ## Step 1: Setup the Provider
@@ -30,7 +30,7 @@ Wrap your application with the `X402Provider` in your `_app.tsx` file:
 ```tsx
 // pages/_app.tsx
 import type { AppProps } from 'next/app';
-import { X402Provider } from 'Xpair';
+import { X402Provider } from 'xpair';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -54,7 +54,7 @@ That's it! Just drop in the XPair component:
 
 ```tsx
 // pages/payment.tsx
-import { XPair } from 'Xpair';
+import { XPair } from 'xpair';
 
 export default function PaymentPage() {
   return (
@@ -128,7 +128,7 @@ module.exports = nextConfig;
 If you need custom UI, use the `usePayment` hook:
 
 ```tsx
-import { usePayment } from 'Xpair';
+import { usePayment } from 'xpair';
 
 function CustomPaymentComponent() {
   const { executePayment, isLoading, error } = usePayment({
@@ -158,7 +158,7 @@ function CustomPaymentComponent() {
 Xpair also includes PaymentButton, PaymentForm, and BalanceDisplay for more control:
 
 ```tsx
-import { PaymentButton, BalanceDisplay } from 'Xpair';
+import { PaymentButton, BalanceDisplay } from 'xpair';
 
 <BalanceDisplay token={usdcToken} showRefresh={true} />
 <PaymentButton
