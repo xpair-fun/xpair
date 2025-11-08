@@ -199,7 +199,7 @@ export default function Simple() {
             { icon: '🎨', title: 'Beautiful UI', desc: 'Pre-built payment modal' },
             { icon: '👛', title: 'Auto Wallet', desc: 'Automatic wallet connection' },
             { icon: '💰', title: 'Zero Fees', desc: 'Users pay nothing extra' },
-            { icon: '🔄', title: 'Smart Routing', desc: '3 facilitators via onchain.fi' },
+            { icon: '🔄', title: 'Smart Routing', desc: 'Multiple facilitators' },
             { icon: '⚡', title: 'Fast', desc: 'Sub-second verification' },
             { icon: '🔧', title: 'Zero Config', desc: 'No setup or styling needed' },
           ].map((feature, idx) => (

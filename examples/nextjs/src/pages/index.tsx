@@ -377,7 +377,7 @@ export default function Home() {
               { icon: '🎨', title: 'Beautiful UI', desc: 'Pre-built payment modal with modern design' },
               { icon: '👛', title: 'Auto Wallet', desc: 'Automatic wallet connection & detection' },
               { icon: '💰', title: 'Zero Fees', desc: 'Users pay nothing extra for transactions' },
-              { icon: '🔄', title: 'Smart Routing', desc: '3 facilitators via onchain.fi failover' },
+              { icon: '🔄', title: 'Smart Routing', desc: 'Multiple facilitators with failover' },
               { icon: '⚡', title: 'Fast', desc: 'Sub-second payment verification' },
               { icon: '🔧', title: 'Zero Config', desc: 'No setup, styling, or API keys needed' },
             ].map((feature, idx) => (

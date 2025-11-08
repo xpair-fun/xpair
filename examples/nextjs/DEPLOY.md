@@ -174,7 +174,7 @@ For deployment issues:
 
 The deployed app includes:
 - Full Xpair payment integration
-- Smart routing via onchain.fi
+- Smart routing with multiple facilitators
 - Multiple payment examples
 - Wallet connection UI
 - Balance display components
